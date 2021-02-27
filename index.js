@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require ('inquirer');
 const fs = require ('fs');
-const generateMarkdown = require('./README_Generator/utils/generateMarkdown')
+const generateMarkdown = require('./utils/generateMarkdown')
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -36,7 +36,7 @@ const questions = [
         name: 'tests',
     },
     {
-        type: 'checkbox',
+        type: 'list',
         message: 'Choose a license for your project.',
         choices:['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0', 'The Unlicense'],
         name: 'license',
